@@ -71,10 +71,70 @@
               Your browser does not support this audio.
           </audio>
         </p>
-      </section>
+      </section><br>
 
-      <section class="tables">
-
+      <section class="table">
+        This is how much cat food costs btw:    <!--Took this information from here: https://www.omlet.co.uk/guide/cats/should_i_get_a_cat/how_much_do_cats_cost/-->
+        <table>
+          <caption>Food cost breakdown</caption><br><br>
+          <colgroup>    <!--Just put this here to test how this tag is used; but presumably this is better done using id tags and CSS!-->
+            <col span="2" style="background-color:lightblue">
+            <col style="background-color:red">
+            <col style="background-color:yellow">
+            <col span="2" style="background-color:orange">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Quantities</th>
+              <th>High Cost</th>
+              <th>Medium Cost</th>
+              <th>Low Cost</th>
+              <th>Cats Are Great!</th>
+              <th>I Love Cats!</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pouches (1x)</td>
+              <td>60p</td>
+              <td>29p</td>
+              <td>19p</td>
+              <td colspan="2">Yes</td>
+            </tr>
+            <tr>
+              <td>Dry Food (per kg)</td>
+              <td>£6.30</td>
+              <td>£2.65</td>
+              <td>£1.25</td>
+              <td rowspan="3">Yes</td>    <!--Note that rowspan cannot expand out of the "tbody" element.-->
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Pouches Per Year (2 per day)</td>
+              <td>£438.00</td>
+              <td>£211.70</td>
+              <td>£138.70</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Dry Food Per Year (50g per day)</td>
+              <td>£114.98</td>
+              <td>£48.36</td>
+              <td>£22.81</td>
+              <td>Yes</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr><strong>
+              <td><strong>Total cost per year</strong></td>
+              <td><strong>£552.98</strong></td>
+              <td><strong>£260.06</strong></td>
+              <td><strong>£161.51</strong></td>
+              <td><strong>Yes</strong></td>
+              <td><strong>Yes</strong></td>
+            </tr>
+          </tfoot>
+        </table>
       </section>
 
     </main>
@@ -82,6 +142,3 @@
   </body>
 
 </html>
-
-
-<!--Tables-->

@@ -41,9 +41,17 @@
           </audio>    <!--audio files obtained from "https://www.freesoundeffects.com/"-->
         </p>
       </section>
-        
-      <section class="video">
 
+      <section class="video-file">
+        And this is what a dog looks like:<br>
+        <video src="..\media\Dog With Stick - 37130.mp4" controls autoplay muted>   <!--Within Chrome (and other browsers) the autoplay attribute for video's only works if the muted attribute is on as well (good)!-->
+          <!--Can also add in the video using seperate source tags as for the audio tag above (and the audio tag can also be done like this with the audio in the src attribute). I just did it this way for illustration purposes-->
+        </video>
+      </section><br>
+
+      <section class="video-youtube">
+        Fortunately dogs like this don't exist!!<br>
+        <iframe src="https://www.youtube.com/embed/hRVF0Y_KJr4" width="750" height="500" allow="fullscreen"></iframe>    <!--For linking Youtube video's into HTML; need to 1) Use the iframe tag; and 2) Make sure it's in the format shown here (e.g. "https://www.youtube.com/embed/<video-id>")-->
       </section>
 
       <section class="forms">
@@ -57,5 +65,6 @@
 </html>
 
 
-<!--Forms-->
-<!--Video-->
+<!--Quickly re-read images chapter in the HTML/CSS book-->
+<!--Forms (also make sure to test grouping form elements with the fieldset tag)-->
+<!--When you get to Javascript; write something to hide that evil dog video unless asked! lol-->
