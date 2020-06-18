@@ -11,21 +11,77 @@
   </head>
 
   <body>
+
     <nav>
       <ul>
         <li><a href="../Index.html">Home</a></li>
         <li><a href="Dogs.html">Dogs</a></li>
       </ul>
     </nav>
+
     <header>
       <h1>Cats: The purrfect place to be</h1>
       <blockquote cite="https://www.petsworld.in/blog/famous-quotes-about-dogs-and-cats.html">
         “Women and cats will do as they please, and men and dogs should relax and get used to the idea.”- Robert A. Heinlein
       </blockquote>
     </header>
-    <p>
-      If you find a lost cat, please contact the <abbr title="Royal Society for the Prevention of Cruelty to Animals">RSPCA</abbr> who will be happy to help.
-    </p>
+
+    <main>
+
+      <p>
+         If you find a lost cat, please contact the <abbr title="Royal Society for the Prevention of Cruelty to Animals"><a href="https://www.rspca.org.uk/">RSPCA</a></abbr> who will be happy to help.
+      </p>
+
+      <aside>
+        Here's a few examples of cats:
+        <ul>
+          <li>British Shorthair</li>
+          <li>Maine Coon</li>
+          <li>Bengal Cat</li>
+          <li>Ragdoll</li>
+        </ul>
+      </aside>
+
+      <section class="pictures">
+
+        <article class="image-with-figure-element">
+          <figure>
+            <img src="https://www.rd.com/wp-content/uploads/2019/11/cat-10-e1573844975155.jpg" alt="Adoreable cat" width="500" height="350">
+            <figcaption>Wow that's a cute cat!</figcaption>
+          </figure>
+        </article>
+
+        <article class="image-with-picture-element">
+          <picture>
+            <source media="screen" srcset="../media/cool_cat.jpeg">
+            <source media="print" srcset="https://data.whicdn.com/images/328759254/original.jpg">   <!--I think these media queries are better handled through CSS, but nice to see how to do it using the HTML markup directly-->
+            <img src="https://cdn.shopify.com/s/files/1/0001/8133/8138/products/Fashion-Glasses-Small-Pet-Dogs-Cat-Glasses-Sunglasses-Eye-Protection-Pet-Cool-Glasses-Pet-Photos-Props_300x.jpg?v=1571709158" alt="Adoreable cat" width="500" height="350"><br>
+            This is one cool customer!
+            <!--Note that the img tag in the picture element is not optional. The source is there to replace the picture specified in the img element-->
+            <!--Also note that the width and height are defined by the img element. They also apply to the sources (although these are better controlled using CSS)-->
+          </picture>
+        </article>
+
+      </section>
+
+      <section class="audio">
+        <p>For the avoidance of any doubt, this is what a cat sounds like:
+          <audio controls loop>
+            <source src="../media/Cat-meow-audio-clip.mp3" type="audio/mpeg">
+              Your browser does not support this audio.
+          </audio>
+        </p>
+      </section>
+
+      <section class="tables">
+
+      </section>
+
+    </main>
+
   </body>
 
 </html>
+
+
+<!--Tables-->
