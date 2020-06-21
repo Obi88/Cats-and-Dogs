@@ -52,9 +52,85 @@
       <section class="video-youtube">
         Fortunately dogs like this don't exist!!<br>
         <iframe src="https://www.youtube.com/embed/hRVF0Y_KJr4" width="750" height="500" allow="fullscreen"></iframe>    <!--For linking Youtube video's into HTML; need to 1) Use the iframe tag; and 2) Make sure it's in the format shown here (e.g. "https://www.youtube.com/embed/<video-id>")-->
-      </section>
+      </section><br>
 
       <section class="forms">
+
+        <form class="" action="index.html" method="post" autocomplete="off">    <!--Setting autocomplete to off prevents the browser from suggesting values for the field based on past entries that have been cached elsewhere-->
+          Please provide some data below to help us get to know you better:<br><br>
+          <fieldset>
+            <legend>Basic information:</legend>
+            <p><label for="name">Name:</label>    <!--The "for" attribute in the lable targets the form controls id, not the name.-->
+              <input type="text" name="name" id="name" placeholder="John Doe" required></p>   <!--Both the value of the "name" attribute and the information contained in the form control is sent to the server for processing.-->
+            <p><label for="dob">Date of birth:</label>
+              <input type="date" name="dob" id="dob" required></p>
+            <p><label for="email">Email:</label>
+              <input type="email" name="email" id="email" placeholder="johndoe@placeholder.com"></p>    <!--Could use a "value" rather than "placeholder" attribute. But a value specifies an actual initial value, whereas placeholder is just indicative text which is not submitted by default-->
+            <p><label for="website">Personal website (if applicable):</label>
+              <input type="url" name="website" id="website" placeholder="www.johndoe.com"></p>    <!--Could use a "value" rather than "placeholder" attribute. But a value specifies an actual initial value, whereas placeholder is just indicative text which is not submitted by default-->
+            <p><label for="password">Password:</label>
+              <input type="password" name="pwd" id="password" placeholder="Enter password..."></p>
+            <p><label>Description: <textarea name="description" id="description">About me...</textarea></label></p>    <!--rather than using a "for" attribute in the label, can also just place the input within the label element like I've done here in order to associate them together.-->
+          </fieldset><br><br>
+
+          <fieldset>
+            <legend>Favourites:</legend>
+            <p>Favourite dog size:</p>
+            <p id="radio-buttons">    <!--Use id values (or class values within the child elements) in order to apply CSS styling and/or Javascript functionality.-->
+              <label><input type="radio" name="size" value="large">Large</label>
+              <label><input type="radio" name="size" value="medium">Medium</label>
+              <label><input type="radio" name="size" value="small">Small</label>
+            </p>
+            <p>Dog breeds you like:</p>
+            <p id="checkbox">
+              <label><input type="checkbox" name="breed" value="labrador">Labrador</label>
+              <label><input type="checkbox" name="breed" value="golden-retreiver">Golden Retreiver</label>
+              <label><input type="checkbox" name="breed" value="poodle">Poodle</label>
+              <label><input type="checkbox" name="breed" value="bulldog">BullDog</label>
+            </p>
+            <p>Favourite colour:</p>
+            <p>
+              <label for="">Select Colour: </label>
+              <input type="color" name="fav-colour" id="fav-colour" value="#E01010">    <!--The initial value in the color form control must be specificed in hexadecimal notation (the value i put here is red). If no value or an invalid value is given, the initial value defaults to black-->
+            </p>
+            <p>Request more information on dog breed groups:</p>
+            <p>
+              <label for="">Select a breed [hold ctrl key to select multiple]:</label>
+              <select id="breed-group" name="breed-group" multiple size="4">
+                <optgroup label="Companion dogs">
+                  <option value="dalmatian">Dalmatian</option>
+                  <option value="boston-terrier">Boston Terrier</option>
+                </optgroup>
+                <optgroup label="Herding dogs">
+                  <option value="australian-shepard">Australian Shepard</option>
+                  <option value="collie">Collie</option>
+                  <option value="icelandic-sheepdog">Icelandic Sheepdog</option>
+                </optgroup>
+                <optgroup label="Hound dogs">
+                  <option value="basset-hound">Basset Hound</option>
+                  <option value="bloodhound">Bloodhound</option>
+                  <option value="beagle">Beagle</option>
+                  <option value="irish-wolfhound">Irish Wolfhound</option>
+                </optgroup>
+                <optgroup label="Sporting dogs">
+                  <option value="golden-retreiver">Golden retreiver</option>
+                  <option value="labrador">Labrador</option>
+                  <option value="irish-setter">Irish Setter</option>
+                </optgroup>
+                <optgroup label="Terrier dogs">
+                  <option value="border-terrier">Border Terrier</option>
+                  <option value="welsh-terrier">Welsh Terrier</option>
+                </optgroup>
+                <optgroup label="Working dogs">
+                  <option value="chow-chow">Chow Chow</option>
+                </optgroup>
+              </select>
+            </p>
+          </fieldset><br><br>
+
+          <input type="submit" name="submit" value="Send information">
+          <input type="reset" name="reset">
+        </form>
 
       </section>
 
@@ -65,6 +141,4 @@
 </html>
 
 
-<!--Quickly re-read images chapter in the HTML/CSS book-->
-<!--Forms (also make sure to test grouping form elements with the fieldset tag)-->
 <!--When you get to Javascript; write something to hide that evil dog video unless asked! lol-->
