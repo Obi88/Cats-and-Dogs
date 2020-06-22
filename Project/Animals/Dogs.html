@@ -56,7 +56,7 @@
 
       <section class="forms">
 
-        <form class="" action="index.html" method="post" autocomplete="off">    <!--Setting autocomplete to off prevents the browser from suggesting values for the field based on past entries that have been cached elsewhere-->
+        <form class="dog-form" action="index.html" method="post" autocomplete="off">    <!--Setting autocomplete to off prevents the browser from suggesting values for the field based on past entries that have been cached elsewhere-->
           Please provide some data below to help us get to know you better:<br><br>
           <fieldset>
             <legend>Basic information:</legend>
@@ -71,6 +71,7 @@
             <p><label for="password">Password:</label>
               <input type="password" name="pwd" id="password" placeholder="Enter password..."></p>
             <p><label>Description: <textarea name="description" id="description">About me...</textarea></label></p>    <!--rather than using a "for" attribute in the label, can also just place the input within the label element like I've done here in order to associate them together.-->
+            <input type="button" name="button-howl" value="Howl" onclick="alert('WOOF WOOF WOOF WOOF!!!!')">
           </fieldset><br><br>
 
           <fieldset>

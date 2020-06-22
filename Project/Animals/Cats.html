@@ -135,9 +135,62 @@
             </tr>
           </tfoot>
         </table>
-      </section>
+      </section><br>
 
-      <section class="forms">
+      <section class="forms">   <!--Always use "_" in HTML names, id's and classes from now on; not "-". The dash gives issues sometimes for some reason-->
+        <button type="button" name="button" onclick="alert('I LOVE CATS!!')"><em>Wanna hear a secret..?</em> <img src="../media/tenor.gif" alt="Lips are sealed" width="130" height="100"></button>   <!--Buttons can have either type submit (like input type=submit), reset (like input type = reset), or type button (like input type=button) where it has no default behavior, and does nothing when pressed by default. It can have client_side scripts listen to the element's events, which are triggered when the events occur.-->
+
+        <form class="cat_form" method="get" oninput="total_cost.value=parseInt(cat_number.value)*parseInt(budget_per_cat.value)">
+          <p>
+            <label for="">Select your favourite cat type:</label>
+            <input list="cat_breeds" name="cat_types" placeholder="Select a breed">   <!--List name and datalist tag id have to match to associate them together-->
+            <datalist id="cat_breeds">    <!--These elements are handy, as they effectively built an autocomplete feature into HTML5 without requiring JavaScript-->
+              <option value="British Shorthair">They're cool (can add a description here)</option>
+              <option value="Maine Coon">Big!!</option>
+              <option value="Bengal Cat"></option>
+              <option value="Ragdoll">Fluffy</option>
+            </datalist>
+          </p>
+
+          <input type="search" name="search_box" id="search_box" placeholder="Search for a cat breed"><br><br>    <!--These are largely the same as text form controls, but both allow for custom styling and also browsers often save the queries entered into search field to use as suggestions next time to improve user experience-->
+
+          <fieldset>
+            <legend>Cat budget</legend>
+
+            <p><label>How many cats do you want: <input type="number" id="cat_number_id"  name="cat_number" value="2"></label></p>
+            <p>+ <label>Budget per cat: <input type="range" id="budget_per_cat_id" name="budget_per_cat" value="100" min="0" max="1000" step="50" list="tickmarks"></label></p>
+            <p>= <label>Total cost: <output name="total_cost" for="cat_number_id budget_per_cat_id">200</output></label></p>
+
+            <datalist id="tickmarks">   <!--Currently, no browser fully supports these features. Firefox doesn't support hash marks and labels at all, for example, while Chrome supports hash marks but doesn't support labels. Version 66 (66.0.3359.181) of Chrome supports labels but the <datalist> tag has to be styled with CSS as its display property is set to none by default, hiding the labels.-->
+              <option value="0" label="0"></option>
+              <option value="100"></option>
+              <option value="200"></option>
+              <option value="300"></option>
+              <option value="400"></option>
+              <option value="500" label="500"></option>
+              <option value="600"></option>
+              <option value="700"></option>
+              <option value="800"></option>
+              <option value="900"></option>
+              <option value="1000" label="1000"></option>
+            </datalist>
+
+          </fieldset><br>
+
+          <fieldset>
+            <legend>Timimgs</legend>
+            <p><label>What time do you want to get the cat: <input name= "time" type="time"></label></p>
+            <p><label>What week do you want to get the cat: <input type="week"></label></p>
+            <p><label>What month will you hold the cats housewarming party: <input type="month"></label></p>
+            <p><label>What date will you get your cat's first gift: <input type="date"></label></p>
+            <p><label>Sorry, meant to say what date and time will you get your cat's first gift: <input type="datetime-local"></label></p>
+          </fieldset><br>
+
+          <p><label for="cat_photo">Upload your favourite cat picture:</label>
+          <input type="file" name="cat_photo" id="cat_photo"></p>
+          <p><input type="image" src="../media/Submit-Button-300x225.png"></p>
+
+        </form>
 
       </section>
 
@@ -148,5 +201,5 @@
 </html>
 
 
-<!--Other form elements (also make sure to test grouping form elements with the fieldset tag)-->
-<!--Specifically, add these form controls: Button, Datalist, Numeric, Range (use min, max, step), Output, Time/Date/Datetime/Datetime-local/Week/Month, Submit button as image, File, Hidden, Search, Tel (use regex pattern atttribute here)-->
+<!--Specifically, add these form controls: Hidden, Tel (use regex pattern atttribute here)-->
+<!-- 1) Play around a little bit more with the submit button to understand how the get method appends the form controls (by name value) to the URL. 2) Note that since there's no action value, it's just staying on the current page. 3) Also note that there seems to be an X and Y value appended onto the end of the URL for the value of un-named form controls (spefically within the "Timings" fieldset).
