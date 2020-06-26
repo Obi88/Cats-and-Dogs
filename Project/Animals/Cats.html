@@ -190,6 +190,9 @@
           <input type="file" name="cat_photo" id="cat_photo"></p>
           <p><input type="image" src="../media/Submit-Button-300x225.png"></p>
 
+          <input type="hidden" name="hidden" value="This is a GET method form action so the name hidden and the value of this string will appear in the URL? Yes it worked and it does!">
+          <!--The actual purpose of this hidden tag is pass information from the client side that doesn't render on the page, but can be passed back to the server as a name/value pair to do stuff with (such as the user's IP address or the location of the site from which the request originated)-->
+
         </form>
 
       </section>
@@ -201,5 +204,4 @@
 </html>
 
 
-<!--Specifically, add these form controls: Hidden, Tel (use regex pattern atttribute here)-->
 <!-- 1) Play around a little bit more with the submit button to understand how the get method appends the form controls (by name value) to the URL. 2) Note that since there's no action value, it's just staying on the current page. 3) Also note that there seems to be an X and Y value appended onto the end of the URL for the value of un-named form controls (spefically within the "Timings" fieldset).

@@ -65,7 +65,9 @@
             <p><label for="dob">Date of birth:</label>
               <input type="date" name="dob" id="dob" required></p>
             <p><label for="email">Email:</label>
-              <input type="email" name="email" id="email" placeholder="johndoe@placeholder.com"></p>    <!--Could use a "value" rather than "placeholder" attribute. But a value specifies an actual initial value, whereas placeholder is just indicative text which is not submitted by default-->
+              <input type="email" name="email" id="email" placeholder="johndoe@placeholder.com" required></p>    <!--Could use a "value" rather than "placeholder" attribute. But a value specifies an actual initial value, whereas placeholder is just indicative text which is not submitted by default-->
+            <p><label for="tel">Phone number:</label>
+              <input type="tel" name="tel" id="tel" placeholder="+00-1234-5678" pattern="\+[0-9]{2}-[0-9]{4}-[0-9]{4}"></p>   <!--The validation for whether this form control is completed in line with the regex (defined in the pattern attribute) happens at form submission. Use "blur" event (in JavaScript preferably) to do it as soon as the user leaves the control-->
             <p><label for="website">Personal website (if applicable):</label>
               <input type="url" name="website" id="website" placeholder="www.johndoe.com"></p>    <!--Could use a "value" rather than "placeholder" attribute. But a value specifies an actual initial value, whereas placeholder is just indicative text which is not submitted by default-->
             <p><label for="password">Password:</label>
@@ -142,4 +144,5 @@
 </html>
 
 
+<!--Look into specifially what the POST method is sending and how it works (I know it sends HTTP headers, but what does that mean and how is that used on the server side).-->
 <!--When you get to Javascript; write something to hide that evil dog video unless asked! lol-->
