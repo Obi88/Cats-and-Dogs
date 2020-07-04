@@ -8,6 +8,7 @@
     <meta name="author" content="Obi88">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meow!</title>
+    <link rel="stylesheet" type="text/css" href="../Design/styles.css">
   </head>
 
   <body>
@@ -154,37 +155,39 @@
 
           <input type="search" name="search_box" id="search_box" placeholder="Search for a cat breed"><br><br>    <!--These are largely the same as text form controls, but both allow for custom styling and also browsers often save the queries entered into search field to use as suggestions next time to improve user experience-->
 
-          <fieldset>
-            <legend>Cat budget</legend>
+          <div class="grid-container">
+            <fieldset class="grid1">
+              <legend>Cat budget</legend>
 
-            <p><label>How many cats do you want: <input type="number" id="cat_number_id"  name="cat_number" value="2"></label></p>
-            <p>+ <label>Budget per cat: <input type="range" id="budget_per_cat_id" name="budget_per_cat" value="100" min="0" max="1000" step="50" list="tickmarks"></label></p>
-            <p>= <label>Total cost: <output name="total_cost" for="cat_number_id budget_per_cat_id">200</output></label></p>
+              <p><label>How many cats do you want: <input type="number" id="cat_number_id"  name="cat_number" value="2"></label></p>
+              <p>+ <label>Budget per cat: <input type="range" id="budget_per_cat_id" name="budget_per_cat" value="100" min="0" max="1000" step="50" list="tickmarks"></label></p>
+              <p>= <label>Total cost: <output name="total_cost" for="cat_number_id budget_per_cat_id">200</output></label></p>
 
-            <datalist id="tickmarks">   <!--Currently, no browser fully supports these features. Firefox doesn't support hash marks and labels at all, for example, while Chrome supports hash marks but doesn't support labels. Version 66 (66.0.3359.181) of Chrome supports labels but the <datalist> tag has to be styled with CSS as its display property is set to none by default, hiding the labels.-->
-              <option value="0" label="0"></option>
-              <option value="100"></option>
-              <option value="200"></option>
-              <option value="300"></option>
-              <option value="400"></option>
-              <option value="500" label="500"></option>
-              <option value="600"></option>
-              <option value="700"></option>
-              <option value="800"></option>
-              <option value="900"></option>
-              <option value="1000" label="1000"></option>
-            </datalist>
+              <datalist id="tickmarks">   <!--Currently, no browser fully supports these features. Firefox doesn't support hash marks and labels at all, for example, while Chrome supports hash marks but doesn't support labels. Version 66 (66.0.3359.181) of Chrome supports labels but the <datalist> tag has to be styled with CSS as its display property is set to none by default, hiding the labels.-->
+                <option value="0" label="0"></option>
+                <option value="100"></option>
+                <option value="200"></option>
+                <option value="300"></option>
+                <option value="400"></option>
+                <option value="500" label="500"></option>
+                <option value="600"></option>
+                <option value="700"></option>
+                <option value="800"></option>
+                <option value="900"></option>
+                <option value="1000" label="1000"></option>
+              </datalist>
 
-          </fieldset><br>
+            </fieldset><br>
 
-          <fieldset>
-            <legend>Timimgs</legend>
-            <p><label>What time do you want to get the cat: <input name= "time" type="time"></label></p>
-            <p><label>What week do you want to get the cat: <input type="week"></label></p>
-            <p><label>What month will you hold the cats housewarming party: <input type="month"></label></p>
-            <p><label>What date will you get your cat's first gift: <input type="date"></label></p>
-            <p><label>Sorry, meant to say what date and time will you get your cat's first gift: <input type="datetime-local"></label></p>
-          </fieldset><br>
+            <fieldset class="grid2">
+              <legend>Timimgs</legend>
+              <p><label>What time do you want to get the cat: <input name= "time" type="time"></label></p>
+              <p><label>What week do you want to get the cat: <input type="week"></label></p>
+              <p><label>What month will you hold the cats housewarming party: <input type="month"></label></p>
+              <p><label>What date will you get your cat's first gift: <input type="date"></label></p>
+              <p><label>Sorry, meant to say what date and time will you get your cat's first gift: <input type="datetime-local"></label></p>
+            </fieldset><br>
+          </div>
 
           <p><label for="cat_photo">Upload your favourite cat picture:</label>
           <input type="file" name="cat_photo" id="cat_photo"></p>
@@ -199,6 +202,7 @@
 
     </main>
 
+    <script type="text/javascript" charset="utf-8" src="../Function/app.js"></script>
   </body>
 
 </html>

@@ -1,0 +1,87 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-color: OldLace;
+}
+
+/* Note that the default display value for li's is "list-item". So when you change this, the bullet points disappear. Therefore, to bullets need to be added back (see step below). */
+nav ul li {
+  display: inline;
+  padding: 0.5em;
+}
+
+nav ul > li:before {
+  content:"\ffed"; margin-right:0.5em;
+}
+
+a:hover {
+  color: green;
+}
+
+audio {
+  border: 10px solid blue;
+  border-radius: 30px;
+}
+
+#evil_dog_button {
+  margin-left: 20px;
+}
+
+#dog_video {
+  display: none;
+}
+
+section.pictures {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+section.pictures > article {
+  margin: 10px;
+  padding: 10px;
+  border: 10px double magenta;
+  animation-name: cats;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes cats {
+  0% {border-color: magenta;}
+  50% {border-color: gold;}
+  100% {border-color: blue;}
+}
+
+figure, figcaption, img {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+.grid1 {
+  grid-area: piece1;
+  background-color: LawnGreen;
+}
+
+.grid2 {
+  grid-area: piece2;
+  background-color: LawnGreen;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-template-areas: "piece1 piece2"
+}
+
+#copyright {
+  transition: transform 5s;
+}
+
+#copyright:hover {
+  transform: rotate3d(1, 0, 0.5, 90deg);
+}
