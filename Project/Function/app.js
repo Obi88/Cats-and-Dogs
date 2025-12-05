@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const evilDogVideoContainer = document.querySelector(".video-youtube")
   let toggle = "hidden";
 
-  submit.addEventListener("click", () => alert("Info's on it's way ⚡⚡"));
+  submit.addEventListener("click", () => alert("Info's on it's way ⚡⚡"));   // Dec code for emoji: &#9889; Hex code for emoji: &#x26A1
 
   // Stop the iframe video from continuing to play when it's hidden.
   function stopVideo(element) {
