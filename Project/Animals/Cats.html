@@ -54,7 +54,7 @@
 
         <article class="image-with-picture-element">
           <picture>
-            <source media="screen" srcset="../media/cool_cat.jpeg">
+            <source media="screen" srcset="../Media/cool_cat.jpeg">
             <source media="print" srcset="https://data.whicdn.com/images/328759254/original.jpg">   <!--I think these media queries are better handled through CSS, but nice to see how to do it using the HTML markup directly-->
             <img src="https://cdn.shopify.com/s/files/1/0001/8133/8138/products/Fashion-Glasses-Small-Pet-Dogs-Cat-Glasses-Sunglasses-Eye-Protection-Pet-Cool-Glasses-Pet-Photos-Props_300x.jpg?v=1571709158" alt="Adoreable cat" width="500" height="350"><br>
             This is one cool customer!
@@ -68,7 +68,7 @@
       <section class="audio">
         <p>For the avoidance of any doubt, this is what a cat sounds like:
           <audio controls loop>
-            <source src="../media/Cat-meow-audio-clip.mp3" type="audio/mpeg">
+            <source src="../Media/Cat-meow-audio-clip.mp3" type="audio/mpeg">
               Your browser does not support this audio.
           </audio>
         </p>
@@ -139,7 +139,7 @@
       </section><br>
 
       <section class="forms">   <!--Always use "_" in HTML names, id's and classes from now on; not "-". The dash gives issues sometimes for some reason-->
-        <button type="button" name="button" onclick="alert('I LOVE CATS!!')"><em>Wanna hear a secret..?</em> <img src="../media/tenor.gif" alt="Lips are sealed" width="130" height="100"></button>   <!--Buttons can have either type submit (like input type=submit), reset (like input type = reset), or type button (like input type=button) where it has no default behavior, and does nothing when pressed by default. It can have client_side scripts listen to the element's events, which are triggered when the events occur.-->
+        <button type="button" name="button" onclick="alert('I LOVE CATS!!')"><em>Wanna hear a secret..?</em> <img src="../Media/tenor.gif" alt="Lips are sealed" width="130" height="100"></button>   <!--Buttons can have either type submit (like input type=submit), reset (like input type = reset), or type button (like input type=button) where it has no default behavior, and does nothing when pressed by default. It can have client_side scripts listen to the element's events, which are triggered when the events occur.-->
 
         <form class="cat_form" method="get" oninput="total_cost.value=parseInt(cat_number.value)*parseInt(budget_per_cat.value)">
           <p>
@@ -191,7 +191,7 @@
 
           <p><label for="cat_photo">Upload your favourite cat picture:</label>
           <input type="file" name="cat_photo" id="cat_photo"></p>
-          <p><input type="image" src="../media/Submit-Button-300x225.png"></p>
+          <p><input type="image" src="../Media/Submit-Button-300x225.png"></p>
 
           <input type="hidden" name="hidden" value="This is a GET method form action so the name hidden and the value of this string will appear in the URL? Yes it worked and it does!">
           <!--The actual purpose of this hidden tag is pass information from the client side that doesn't render on the page, but can be passed back to the server as a name/value pair to do stuff with (such as the user's IP address or the location of the site from which the request originated)-->
