@@ -5,4 +5,4 @@ __pycache__/
 thumbs.db
 venv/
 Old/
-*.DS_Store
+**/.DS_Store
